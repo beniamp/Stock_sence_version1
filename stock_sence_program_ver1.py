@@ -125,28 +125,29 @@ total_quantity_overall = df['total_quantity'].sum()
 # ----- SECTION 5: displayment to selection widget on DLP, DLPC, and stores unique values 
 
 # Select box widget values, in order; DLP, store, DLPC
-product_list = ['All products'] + merged_df['DLP'].unique().tolist()
 category_list = ['All categories'] + merged_df['category'].unique().tolist()
+selected_category = st.selectbox('Select Category', category_list)
 
-col01, col02 = st.columns(2)
-with col01:
-    selected_category = st.selectbox('Select Category', category_list)
-
-with col02:
-    selected_product = st.selectbox('Select Product', product_list)  
-
-st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
-
-# Filter DataFrame by selected category
-if selected_product != 'All products':
+if selected_category != 'All categories':
     filtered_df = merged_df[merged_df['DLP'] == selected_product]
 else:
     filtered_df = merged_df
 
-if selected_category != 'All categories':
-    filtered_df = merged_df[merged_df['category'] == selected_category]
+# -----
+product_list = ['All products'] + merged_df['DLP'].unique().tolist()
+selected_product = st.selectbox('Select Product', product_list) 
+
+if selected_category != 'All products':
+    filtered_df = filtered_df[merged_df['DLP'] == selected_product]
 else:
-    filtered_df = merged_df
+    filtered_df = filtered_df
+
+st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
+
+# Filter DataFrame by selected category
+
+
+
 
 
 # selecting color and store accordingly to the selected DLP
