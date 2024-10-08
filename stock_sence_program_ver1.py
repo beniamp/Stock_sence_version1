@@ -215,7 +215,7 @@ st.write(f'Selected Store: {selected_store} / selected color: {selected_color}')
 if selected_color != 'All colors':
     filtered_df = filtered_df[filtered_df['color'] == selected_color]
 
-if selected_store != 'All store':
+if selected_store != 'All stores':
     filtered_df = filtered_df[filtered_df['store'] == selected_store]
 
 
