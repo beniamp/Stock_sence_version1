@@ -193,7 +193,7 @@ with col3:
 
 
 # Create 3 columns with empty space on both sides for centering the buttons
-col1, col2, col3 = st.columns([1, 2, 1, 2, 1, 2])
+col1, col2, col3, col4, col5, col6 = st.columns([1, 2, 1, 2, 1, 2])
 
 with col1:
     butt1 = st.button('1 Day Selection')
@@ -210,6 +210,27 @@ with col2:
         st.write('Not Selecting 1 week ago')
 
 with col3:
+    butt3 = st.button('1 Month Ago')
+    if butt3:
+        st.write("Selecting 1 month ago")
+    else:
+        st.write('Not Selecting 1 month ago')
+        
+with col4:
+    butt3 = st.button('1 Month Ago')
+    if butt3:
+        st.write("Selecting 1 month ago")
+    else:
+        st.write('Not Selecting 1 month ago')
+        
+with col5:
+    butt3 = st.button('1 Month Ago')
+    if butt3:
+        st.write("Selecting 1 month ago")
+    else:
+        st.write('Not Selecting 1 month ago')
+        
+with col6:
     butt3 = st.button('1 Month Ago')
     if butt3:
         st.write("Selecting 1 month ago")
