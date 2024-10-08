@@ -122,52 +122,51 @@ total_quantity_overall = df['total_quantity'].sum()
 
 
 # ----- SECTION 4 + 1: Selection widget for applying date filter ranging from minimum to maximum existing date values
-"""
+
 # Create 3 columns with empty space on both sides for centering the buttons
-col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
+#col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
 
-with col1:
-    butt1 = st.button('1 Day Selection')
-    if butt1:
-        st.write("Selecting 1 day ago")
-    else:
-        st.write('Not Selecting 1 day ago')
+#with col1:
+#    butt1 = st.button('1 Day Selection')
+#    if butt1:
+#        st.write("Selecting 1 day ago")
+#    else:
+#        st.write('Not Selecting 1 day ago')
         
-with col2:
-    butt2 = st.button('1 Week Selection')
-    if butt2:
-        st.write("Selecting 1 week ago")
-    else:
-        st.write('Not Selecting 1 week ago')
+#with col2:
+#    butt2 = st.button('1 Week Selection')
+#    if butt2:
+#        st.write("Selecting 1 week ago")
+#    else:
+#        st.write('Not Selecting 1 week ago')
 
-with col3:
-    butt3 = st.button('1 Month Ago')
-    if butt3:
-        st.write("Selecting 1 month ago")
-    else:
-        st.write('Not Selecting 1 month ago')
+#with col3:
+#    butt3 = st.button('1 Month Ago')
+#    if butt3:
+#        st.write("Selecting 1 month ago")
+#    else:
+#        st.write('Not Selecting 1 month ago')
         
-with col4:
-    butt4 = st.button('2 Month Ago')
-    if butt4:
-        st.write("Selecting 2 month ago")
-    else:
-        st.write('Not Selecting 2 month ago')
+#with col4:
+#    butt4 = st.button('2 Month Ago')
+#    if butt4:
+#        st.write("Selecting 2 month ago")
+#    else:
+#        st.write('Not Selecting 2 month ago')
         
-with col5:
-    butt5 = st.button('3 Month Ago')
-    if butt5:
-        st.write("Selecting 3 month ago")
-    else:
-        st.write('Not Selecting 3 month ago')
+#with col5:
+#    butt5 = st.button('3 Month Ago')
+#    if butt5:
+#        st.write("Selecting 3 month ago")
+#    else:
+#        st.write('Not Selecting 3 month ago')
         
-with col6:
-    butt6 = st.button('4 Month Ago')
-    if butt6:
-        st.write("Selecting 4 month ago")
-    else:
-        st.write('Not Selecting 4 month ago')
-"""
+#with col6:
+#    butt6 = st.button('4 Month Ago')
+#    if butt6:
+#       st.write("Selecting 4 month ago")
+#    else:
+#        st.write('Not Selecting 4 month ago')
 
 
 # ----- SECTION 5: displayment to selection widget on DLP, DLPC, and stores unique values 
