@@ -7,8 +7,6 @@ import itertools
 
 
 # Page setting
-st.set_page_config(layout="wide")
-
 st.set_page_config(
     page_title="Stock Sence-Koroush Khan",
     page_icon="📦",
