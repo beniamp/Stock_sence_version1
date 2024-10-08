@@ -164,7 +164,7 @@ rounded_style = """
             border-radius: 15px; /* Rounded corners */
             padding: 20px; /* Padding inside the rectangle */
             margin: 10px; /* Margin outside the rectangle */
-            background-color: #f0f8ff; /* Background color */
+            background-color: #98c9f5; /* Background color */
             text-align: center; /* Center text alignment */
             font-size: 20px; /* Font size */
         }
