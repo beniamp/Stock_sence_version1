@@ -190,20 +190,7 @@ with col2:
 with col3:
     st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
 
-# Create 3 columns with empty space on both sides for centering
-empty_col1, col1, col2, col3, empty_col2 = st.columns([1, 2, 2, 2, 1])
 
-# Display the metric for the last day in a rounded rectangle
-with col1:
-    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Day): {total_quantity_last_day}</div>', unsafe_allow_html=True)
-
-# Display the metric for the last week in a rounded rectangle
-with col2:
-    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Week): {total_quantity_last_week}</div>', unsafe_allow_html=True)
-
-# Display the metric for the last month in a rounded rectangle
-with col3:
-    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
 
 # Create 3 columns with empty space on both sides for centering the buttons
 col1, col2, col3 = st.columns([2, 2, 2])
@@ -212,11 +199,13 @@ with col1:
     butt1 = st.button('1 Day Selection')
     if butt1:
         st.write("Selecting 1 day ago")
+        st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     else:
         st.write('Not Selecting 1 day ago')
         
 with col2:
     butt2 = st.button('1 Week Selection')
+    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     if butt2:
         st.write("Selecting 1 week ago")
     else:
@@ -224,6 +213,7 @@ with col2:
 
 with col3:
     butt3 = st.button('1 Month Ago')
+    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     if butt3:
         st.write("Selecting 1 month ago")
     else:
