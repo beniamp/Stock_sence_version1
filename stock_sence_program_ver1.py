@@ -146,6 +146,31 @@ st.write(f'Selected Category: {selected_category} / selected Product: {selected_
 
 # Filter DataFrame by selected category
 
+# ---- SECTION: Display Metrics in Three Rectangles ----
+# Calculated summary based on filtered df of category and DLP
+df_last_day = filtered_df[(filtered_df['gregorian_date'] >= last_day) | (filtered_df['gregorian_date'].isnull())]
+df_last_week = filtered_df[(filtered_df['gregorian_date'] >= last_week) | (filtered_df['gregorian_date'].isnull())]
+df_last_month = filtered_df[(filtered_df['gregorian_date'] >= last_month) | (filtered_df['gregorian_date'].isnull())]
+
+# calculate total quantity per each time period
+total_quantity_last_day = df_last_day['total_quantity'].sum()
+total_quantity_last_week = df_last_week['total_quantity'].sum()
+total_quantity_last_month = df_last_month['total_quantity'].sum()
+
+# Create 3 columns for the metrics
+col1, col2, col3 = st.columns(3)
+
+# Display the metric for the last day
+with col1:
+    st.metric(label="Total Quantity (Last Day)", value=total_quantity_last_day)
+
+# Display the metric for the last week
+with col2:
+    st.metric(label="Total Quantity (Last Week)", value=total_quantity_last_week)
+
+# Display the metric for the last month
+with col3:
+    st.metric(label="Total Quantity (Last Month)", value=total_quantity_last_month)
 
 
 
