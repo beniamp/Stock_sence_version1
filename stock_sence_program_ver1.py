@@ -139,8 +139,6 @@ selected_product = st.selectbox('Select Product', product_list)
 
 if selected_category != 'All products':
     filtered_df = filtered_df[filtered_df['DLP'] == selected_product]
-else:
-    filtered_df = filtered_df
 
 st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
 
