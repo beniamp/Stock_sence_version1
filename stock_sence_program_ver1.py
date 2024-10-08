@@ -191,6 +191,12 @@ with col3:
     st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
 
 
+butt1 = st.button('Last Day Selection')
+if butt1:
+    st.write("Why are you gay")
+else:
+    sst.write('You are gay')
+
 
 # selecting color and store accordingly to the selected DLP
 color_list = ['All colors'] + filtered_df['color'].unique().tolist()
