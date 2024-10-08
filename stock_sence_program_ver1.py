@@ -191,11 +191,29 @@ with col3:
     st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
 
 
-butt1 = st.button('Last Day Selection')
-if butt1:
-    st.write("Why are you gay")
-else:
-    st.write('You are gay')
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    butt1 = st.button('1 Day Selection')
+    if butt1:
+        st.write("Selecting 1 day ago")
+    else:
+        st.write('Not Selecting 1 day ago')
+        
+with col2:
+    butt2 = st.button('1 Week Selection')
+    if butt2:
+        st.write("Selecting 1 day ago")
+    else:
+        st.write('Not Selecting 1 week ago')
+
+with col3:
+    butt3 = st.button3('1 Month Ago')
+    if butt2:
+        st.write("Selecting 1 month ago")
+    else:
+        st.write('Not Selecting 1 month ago')    
+
 
 
 # selecting color and store accordingly to the selected DLP
