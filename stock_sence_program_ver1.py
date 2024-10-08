@@ -1,4 +1,4 @@
-import pandas as pd
+ import pandas as pd
 import streamlit as st
 import numpy as np
 import jdatetime
@@ -208,7 +208,7 @@ with col2:
         st.write('Not Selecting 1 week ago')
 
 with col3:
-    butt3 = st.button3('1 Month Ago')
+    butt3 = st.button('1 Month Ago')
     if butt2:
         st.write("Selecting 1 month ago")
     else:
