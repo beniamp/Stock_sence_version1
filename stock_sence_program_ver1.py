@@ -195,7 +195,7 @@ butt1 = st.button('Last Day Selection')
 if butt1:
     st.write("Why are you gay")
 else:
-    sst.write('You are gay')
+    st.write('You are gay')
 
 
 # selecting color and store accordingly to the selected DLP
