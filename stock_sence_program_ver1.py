@@ -160,15 +160,15 @@ col1, col2, col3 = st.columns(3)
 
 # Display the metric for the last day
 with col1:
-    st.metric(label="Total Quantity (Last Day)", value=total_quantity_last_day)
+    st.metric(label="Total Quantity (Last Day)", value=int(total_quantity_last_day))
 
 # Display the metric for the last week
 with col2:
-    st.metric(label="Total Quantity (Last Week)", value=total_quantity_last_week)
+    st.metric(label="Total Quantity (Last Week)", value=int(total_quantity_last_week))
 
 # Display the metric for the last month
 with col3:
-    st.metric(label="Total Quantity (Last Month)", value=total_quantity_last_month)
+    st.metric(label="Total Quantity (Last Month)", value=int(total_quantity_last_month))
 
 
 
