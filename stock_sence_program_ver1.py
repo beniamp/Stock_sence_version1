@@ -167,6 +167,7 @@ rounded_style = """
             background-color: #191d21; /* Background color */
             text-align: center; /* Center text alignment */
             font-size: 20px; /* Font size */
+            color: #f2f5f7; /* Font color - change this value to your desired color */
         }
     </style>
 """
