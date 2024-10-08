@@ -125,20 +125,32 @@ total_quantity_overall = df['total_quantity'].sum()
 # ----- SECTION 5: displayment to selection widget on DLP, DLPC, and stores unique values 
 
 # Select box widget values, in order; DLP, store, DLPC
-dlp_list = list(merged_df['DLP'].unique())
-selected_dlp = st.selectbox('Select Product', dlp_list)  
-st.write(selected_dlp)
+dlp_list = ['All products'] + merged_df['category'].unique().tolist()
+category_list = ['All categories'] + merged_df['category'].unique().tolist()
+
+col01, col02 = st.columns(2)
+with col01:
+    selected_category = st.selectbox('Select Category', category_list)
+
+with col02:
+    selected_dlp = st.selectbox('Select Product', dlp_list)  
+
+st.write(f'Selected Category: {selected_category} / selected Product: {selected_dlp}')
+
+# Filter DataFrame by selected category
+if selected_products != 'All products':
+    filtered_df = merged_df[merged_df['DLP'] == selected_products]
+
+if selected_categories != 'All categories':
+    filtered_df = merged_df[merged_df['category'] == selected_categories]
 
 
 # selecting color and store accordingly to the selected DLP
-filtered_df = merged_df[merged_df['DLP'] == selected_dlp]
-
 color_list = ['All colors'] + filtered_df['color'].unique().tolist()
 store_list = ['All stores'] + filtered_df['store'].unique().tolist()
 
 # Create two columns
 col1, col2 = st.columns(2)
-
 # Select box for stores in the first column
 with col1:
     selected_store = st.selectbox('Select the Store', store_list)
@@ -148,8 +160,8 @@ with col2:
     selected_color = st.selectbox('Select the color', color_list)
 
 # Display the selected values
-st.write(f'Selected Store: {selected_store}')
-st.write(f'Selected Color: {selected_color}')
+st.write(f'Selected Store: {selected_store} / selected color: {selected_color}')
+
 
 
 # Filter DataFrame by selected category
