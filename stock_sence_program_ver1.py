@@ -234,5 +234,9 @@ filtered_df['long_term_reorder'] = np.ceil((filtered_df['avg_demand'] * 21) + (f
 
 
 
-final_table = filtered_df[['store', 'color', 'total_quantity', 'total_inventory', 'avg_demand', 'days_to_out_stock', 'short_term_reorder', 'medium_term_reorder', 'long_term_reorder']]
+final_table = filtered_df[['name', 'store', 'color', 'total_quantity', 'total_inventory', 'avg_demand', 'days_to_out_stock', 'short_term_reorder', 'medium_term_reorder', 'long_term_reorder']]
 st.write(final_table)
+
+
+final_second = final_table.groupby(['store', 'name', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'max'}).reset_index()
+st.write(final_second)
