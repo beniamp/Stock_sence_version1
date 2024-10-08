@@ -138,10 +138,10 @@ with col02:
 st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
 
 # Filter DataFrame by selected category
-if selected_products != 'All products':
+if selected_product != 'All products':
     filtered_df = merged_df[merged_df['DLP'] == selected_products]
 
-if selected_categories != 'All categories':
+if selected_category != 'All categories':
     filtered_df = merged_df[merged_df['category'] == selected_categories]
 
 
