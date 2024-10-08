@@ -193,7 +193,7 @@ with col3:
 
 
 # Create 3 columns with empty space on both sides for centering the buttons
-col1, col2, col3, col4, col5, col6 = st.columns([2, 2, 2, 2, 2, 2])
+col1, col2, col3, col4, col5, col6 = st.columns([1, 1, 1, 1, 1, 1])
 
 with col1:
     butt1 = st.button('1 Day Selection')
