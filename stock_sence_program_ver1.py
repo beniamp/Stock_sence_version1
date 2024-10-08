@@ -134,7 +134,7 @@ else:
     filtered_df = merged_df
 
 # -----
-product_list = ['All products'] + merged_df['DLP'].unique().tolist()
+product_list = ['All products'] + filtered_df['DLP'].unique().tolist()
 selected_product = st.selectbox('Select Product', product_list) 
 
 if selected_category != 'All products':
