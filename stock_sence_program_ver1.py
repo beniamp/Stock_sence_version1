@@ -144,7 +144,7 @@ st.write(f'Selected Category: {selected_category} / selected Product: {selected_
 
 # Filter DataFrame by selected category
 
-# ---- SECTION: Display Metrics in Three Rectangles ----
+# ---- SECTION6: Display Metrics in Three Rectangles ----
 # Calculated summary based on filtered df of category and DLP
 df_last_day = filtered_df[(filtered_df['gregorian_date'] >= last_day) | (filtered_df['gregorian_date'].isnull())]
 df_last_week = filtered_df[(filtered_df['gregorian_date'] >= last_week) | (filtered_df['gregorian_date'].isnull())]
@@ -155,21 +155,39 @@ total_quantity_last_day = df_last_day['total_quantity'].sum()
 total_quantity_last_week = df_last_week['total_quantity'].sum()
 total_quantity_last_month = df_last_month['total_quantity'].sum()
 
+# ---- SECTION7: Display Metrics in Rounded Rectangles ----
+# CSS styling for rounded rectangles
+rounded_style = """
+    <style>
+        .rounded-rectangle {
+            border: 2px solid #007BFF; /* Border color */
+            border-radius: 15px; /* Rounded corners */
+            padding: 20px; /* Padding inside the rectangle */
+            margin: 10px; /* Margin outside the rectangle */
+            background-color: #f0f8ff; /* Background color */
+            text-align: center; /* Center text alignment */
+            font-size: 20px; /* Font size */
+        }
+    </style>
+"""
+
+# Injecting CSS into the Streamlit app
+st.markdown(rounded_style, unsafe_allow_html=True)
+
 # Create 3 columns for the metrics
 col1, col2, col3 = st.columns(3)
 
-# Display the metric for the last day
+# Display the metric for the last day in a rounded rectangle
 with col1:
-    st.metric(label="Total Quantity (Last Day)", value=int(total_quantity_last_day))
+    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Day): {total_quantity_last_day}</div>', unsafe_allow_html=True)
 
-# Display the metric for the last week
+# Display the metric for the last week in a rounded rectangle
 with col2:
-    st.metric(label="Total Quantity (Last Week)", value=int(total_quantity_last_week))
+    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Week): {total_quantity_last_week}</div>', unsafe_allow_html=True)
 
-# Display the metric for the last month
+# Display the metric for the last month in a rounded rectangle
 with col3:
-    st.metric(label="Total Quantity (Last Month)", value=int(total_quantity_last_month))
-
+    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
 
 
 
