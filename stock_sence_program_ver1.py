@@ -140,9 +140,13 @@ st.write(f'Selected Category: {selected_category} / selected Product: {selected_
 # Filter DataFrame by selected category
 if selected_product != 'All products':
     filtered_df = merged_df[merged_df['DLP'] == selected_product]
+else:
+    filtered_df = merged_df
 
 if selected_category != 'All categories':
     filtered_df = merged_df[merged_df['category'] == selected_category]
+else:
+    filtered_df = merged_df
 
 
 # selecting color and store accordingly to the selected DLP
