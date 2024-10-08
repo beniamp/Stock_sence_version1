@@ -217,25 +217,25 @@ with col3:
         st.write('Not Selecting 1 month ago')
         
 with col4:
-    butt4 = st.button('1 Month Ago')
+    butt4 = st.button('2 Month Ago')
     if butt4:
-        st.write("Selecting 1 month ago")
+        st.write("Selecting 2 month ago")
     else:
-        st.write('Not Selecting 1 month ago')
+        st.write('Not Selecting 2 month ago')
         
 with col5:
-    butt5 = st.button('1 Month Ago')
+    butt5 = st.button('3 Month Ago')
     if butt5:
-        st.write("Selecting 1 month ago")
+        st.write("Selecting 3 month ago")
     else:
-        st.write('Not Selecting 1 month ago')
+        st.write('Not Selecting 3 month ago')
         
 with col6:
-    butt6 = st.button('1 Month Ago')
+    butt6 = st.button('4 Month Ago')
     if butt6:
-        st.write("Selecting 1 month ago")
+        st.write("Selecting 4 month ago")
     else:
-        st.write('Not Selecting 1 month ago')
+        st.write('Not Selecting 4 month ago')
 
 
 # selecting color and store accordingly to the selected DLP
