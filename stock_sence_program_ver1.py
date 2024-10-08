@@ -151,9 +151,9 @@ df_last_week = filtered_df[(filtered_df['gregorian_date'] >= last_week) | (filte
 df_last_month = filtered_df[(filtered_df['gregorian_date'] >= last_month) | (filtered_df['gregorian_date'].isnull())]
 
 # calculate total quantity per each time period
-total_quantity_last_day = df_last_day['total_quantity'].sum()
-total_quantity_last_week = df_last_week['total_quantity'].sum()
-total_quantity_last_month = df_last_month['total_quantity'].sum()
+total_quantity_last_day = int(df_last_day['total_quantity'].sum())
+total_quantity_last_week = int(df_last_week['total_quantity'].sum())
+total_quantity_last_month = int(df_last_month['total_quantity'].sum())
 
 # ---- SECTION7: Display Metrics in Rounded Rectangles ----
 # CSS styling for rounded rectangles
