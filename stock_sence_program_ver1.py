@@ -133,7 +133,7 @@ st.write(selected_dlp)
 # selecting color and store accordingly to the selected DLP
 filtered_df = merged_df[merged_df['DLP'] == selected_dlp]
 
-color_list = list(filtered_df['color'].unique())
-store_list = list(filtered_df['store'].unique())
+color_list = ['All colors'] + filtered_df['color'].unique().tolist()
+store_list = ['All colors'] + filtered_df['store'].unique().tolist()
 selected_color = st.selectbox('Select the color', color_list)
 selected_store = st.selectbox('Select the Store', store_list)
