@@ -218,7 +218,7 @@ with col3:
         
 with col4:
     butt4 = st.button('1 Month Ago')
-    if butt3:
+    if butt4:
         st.write("Selecting 1 month ago")
     else:
         st.write('Not Selecting 1 month ago')
