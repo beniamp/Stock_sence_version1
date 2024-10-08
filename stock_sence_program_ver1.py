@@ -137,7 +137,7 @@ else:
 product_list = ['All products'] + filtered_df['DLP'].unique().tolist()
 selected_product = st.selectbox('Select Product', product_list) 
 
-if selected_category != 'All products':
+if selected_product != 'All products':
     filtered_df = filtered_df[filtered_df['DLP'] == selected_product]
 
 st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
