@@ -1,6 +1,7 @@
 streamlit
 pandas
-plotly
+jdatetime
 numpy
-xlsxwriter
-kaleido
+datetime
+itertools
+timedelta
