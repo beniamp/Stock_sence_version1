@@ -217,3 +217,18 @@ if selected_color != 'All colors':
 if selected_store != 'All store':
     filtered_df = filtered_df[filtered_df['store'] == selected_color]
 
+
+# ----- SECTION 8: caclculating essential metrics based on values selected in color, DLP, DLPC, and store
+filtered_df = filtered_df.groupby(['DLP', 'DLPC', 'store', 'name', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'max'}).reset_index()
+filtered_df['total_quantity'].fillna(0, inplace=True)
+filtered_df['total_inventory'].fillna(0, inplace=True)
+
+filtered_df['avg_demand'] = filtered_df['total_quantity'] / len(filtered_df['date'].unique())
+filtered_df['days_to_out_stock'] = np.ceil(filtered_df['total_inventory'] / filtered_df['avg_demand'])
+
+
+filtered_df['short_term_reorder'] = np.ceil((filtered_df['avg_demand'] * 3) + (filtered_df['avg_demand'] * 5) / 2)
+filtered_df['medium_term_reorder'] = np.ceil((filtered_df['avg_demand'] * 12) + (filtered_df['avg_demand'] * 15) / 2)
+filtered_df['long_term_reorder'] = np.ceil((filtered_df['avg_demand'] * 21) + (filtered_df['avg_demand'] * 30) / 2)
+
+st.write(filtered_df)
