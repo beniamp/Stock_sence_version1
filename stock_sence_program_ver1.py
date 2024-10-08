@@ -217,22 +217,22 @@ with col3:
         st.write('Not Selecting 1 month ago')
         
 with col4:
-    butt3 = st.button('1 Month Ago')
+    butt4 = st.button('1 Month Ago')
     if butt3:
         st.write("Selecting 1 month ago")
     else:
         st.write('Not Selecting 1 month ago')
         
 with col5:
-    butt3 = st.button('1 Month Ago')
-    if butt3:
+    butt5 = st.button('1 Month Ago')
+    if butt5:
         st.write("Selecting 1 month ago")
     else:
         st.write('Not Selecting 1 month ago')
         
 with col6:
-    butt3 = st.button('1 Month Ago')
-    if butt3:
+    butt6 = st.button('1 Month Ago')
+    if butt6:
         st.write("Selecting 1 month ago")
     else:
         st.write('Not Selecting 1 month ago')
