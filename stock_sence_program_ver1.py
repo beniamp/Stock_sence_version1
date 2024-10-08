@@ -220,7 +220,7 @@ if selected_store != 'All stores':
 
 
 # ----- SECTION 8: caclculating essential metrics based on values selected in color, DLP, DLPC, and store
-filtered_df = filtered_df.groupby(['DLP', 'DLPC', 'store', 'name', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'max'}).reset_index()
+filtered_df = filtered_df.groupby(['DLP', 'DLPC', 'store', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'max'}).reset_index()
 filtered_df['total_quantity'].fillna(0, inplace=True)
 filtered_df['total_inventory'].fillna(0, inplace=True)
 
@@ -234,9 +234,9 @@ filtered_df['long_term_reorder'] = np.ceil((filtered_df['avg_demand'] * 21) + (f
 
 
 
-final_table = filtered_df[['name', 'store', 'color', 'total_quantity', 'total_inventory', 'avg_demand', 'days_to_out_stock', 'short_term_reorder', 'medium_term_reorder', 'long_term_reorder']]
+final_table = filtered_df[['DLP', 'store', 'color', 'total_quantity', 'total_inventory', 'avg_demand', 'days_to_out_stock', 'short_term_reorder', 'medium_term_reorder', 'long_term_reorder']]
 st.write(final_table)
 
 
-final_second = final_table.groupby(['DLP', 'store', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'sum', 'avg_demand': 'avg'}).reset_index()
-st.write(final_second)
+# final_second = final_table.groupby(['DLP', 'store', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'sum', 'avg_demand': 'avg'}).reset_index()
+# st.write(final_second)
