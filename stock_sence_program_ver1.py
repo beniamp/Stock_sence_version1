@@ -128,3 +128,12 @@ total_quantity_overall = df['total_quantity'].sum()
 dlp_list = list(merged_df['DLP'].unique())
 selected_dlp = st.selectbox('Select Product', dlp_list)  
 st.write(selected_dlp)
+
+
+# selecting color and store accordingly to the selected DLP
+filtered_df = merged_df[merged_df['DLP'] == selected_dlp]
+
+color_list = list(filtered_df['color'].unique())
+store_list = list(filtered_df['store'].unique())
+selected_color = st.selectbox('Select the color', color_list)
+selected_store = st.selectbox('Select the Store', store_list)
