@@ -73,3 +73,12 @@ total_quantity_last_day = df_last_day['total_quantity'].sum()
 total_quantity_last_week = df_last_week['total_quantity'].sum()
 total_quantity_last_month = df_last_month['total_quantity'].sum()
 total_quantity_overall = df['total_quantity'].sum()
+
+
+
+# ----- SECTION 5: displayment to selection widget on DLP, DLPC, and stores unique values 
+
+# Select box widget values, in order; DLP, store, DLPC
+dlp_list = list(merged_df['DLP'].unique())
+selected_dlp = st.selectbox('Select Product', dlp_list)  
+st.write(selected_dlp)
