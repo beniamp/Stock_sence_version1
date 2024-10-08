@@ -9,6 +9,13 @@ import itertools
 # Page setting
 st.set_page_config(layout="wide")
 
+st.set_page_config(
+    page_title="Stock Sence-Koroush Khan",
+    page_icon="📦",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 # Load custom CSS
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
