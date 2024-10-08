@@ -199,13 +199,11 @@ with col1:
     butt1 = st.button('1 Day Selection')
     if butt1:
         st.write("Selecting 1 day ago")
-        st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     else:
         st.write('Not Selecting 1 day ago')
         
 with col2:
     butt2 = st.button('1 Week Selection')
-    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     if butt2:
         st.write("Selecting 1 week ago")
     else:
@@ -213,7 +211,6 @@ with col2:
 
 with col3:
     butt3 = st.button('1 Month Ago')
-    st.markdown(f'<div class="rounded-rectangle">Total Quantity (Last Month): {total_quantity_last_month}</div>', unsafe_allow_html=True)
     if butt3:
         st.write("Selecting 1 month ago")
     else:
