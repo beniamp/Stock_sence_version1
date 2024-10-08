@@ -125,7 +125,7 @@ total_quantity_overall = df['total_quantity'].sum()
 # ----- SECTION 5: displayment to selection widget on DLP, DLPC, and stores unique values 
 
 # Select box widget values, in order; DLP, store, DLPC
-dlp_list = ['All products'] + merged_df['category'].unique().tolist()
+product_list = ['All products'] + merged_df['category'].unique().tolist()
 category_list = ['All categories'] + merged_df['category'].unique().tolist()
 
 col01, col02 = st.columns(2)
@@ -133,9 +133,9 @@ with col01:
     selected_category = st.selectbox('Select Category', category_list)
 
 with col02:
-    selected_dlp = st.selectbox('Select Product', dlp_list)  
+    selected_product = st.selectbox('Select Product', product_list)  
 
-st.write(f'Selected Category: {selected_category} / selected Product: {selected_dlp}')
+st.write(f'Selected Category: {selected_category} / selected Product: {selected_product}')
 
 # Filter DataFrame by selected category
 if selected_products != 'All products':
