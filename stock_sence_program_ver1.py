@@ -215,7 +215,7 @@ if selected_color != 'All colors':
     filtered_df = filtered_df[filtered_df['color'] == selected_color]
 
 if selected_store != 'All store':
-    filtered_df = filtered_df[filtered_df['store'] == selected_color]
+    filtered_df = filtered_df[filtered_df['store'] == selected_store]
 
 
 # ----- SECTION 8: caclculating essential metrics based on values selected in color, DLP, DLPC, and store
