@@ -238,5 +238,5 @@ final_table = filtered_df[['name', 'store', 'color', 'total_quantity', 'total_in
 st.write(final_table)
 
 
-final_second = final_table.groupby(['store', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'max'}).reset_index()
+final_second = final_table.groupby(['DLP', 'store', 'color']).agg({'total_quantity': 'sum', 'total_inventory': 'sum', 'avg_demand': 'avg'}).reset_index()
 st.write(final_second)
