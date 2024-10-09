@@ -53,7 +53,7 @@ st.markdown("""
 
 
 # importing csv file into predestined dataframe
-df = pd.read_csv('stock_sence_718.csv')
+df = pd.read_csv('accessories.csv')
 
 
 # ---- SECTION 1: DATE CONVERSION FUNCTION 
