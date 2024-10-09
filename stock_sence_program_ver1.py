@@ -136,7 +136,7 @@ last_row = merged_df[merged_df['gregorian_date'] == last_date]
 first_per_date = first_row['date'].values[0]  # Replace 'column_name' with your desired column
 last_per_date = last_row['date'].values[0]  # Replace 'column_name' with your desired column
 
-st.write(f"Calculated Date Starting From {first_per_date} to {last_per_date}")
+st.write(f"Calculated Date Starting From: {first_per_date} to {last_per_date}")
 
 # ----- SECTION 4 + 1: Selection widget for applying date filter ranging from minimum to maximum existing date values
 
