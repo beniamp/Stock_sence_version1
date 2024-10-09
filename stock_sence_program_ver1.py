@@ -121,6 +121,23 @@ total_quantity_last_month = df_last_month['total_quantity'].sum()
 total_quantity_overall = df['total_quantity'].sum()
 
 
+# -----  SECTION 3 + 1: displaying starting and ending date calculated
+
+
+# Find the minimum and maximum dates
+first_date = merged_df['gregorian_date'].min()
+last_date = merged_df['gregorian_date'].max()
+
+# Filter the rows where the 'gregorian_date' matches the first_date and last_date
+first_row = merged_df[merged_df['gregorian_date'] == first_date]
+last_row = merged_df[merged_df['gregorian_date'] == last_date]
+
+# Access the values from the same row but different columns (example: 'column_name')
+first_per_date = first_row['date'].values[0]  # Replace 'column_name' with your desired column
+last_per_date = last_row['date'].values[0]  # Replace 'column_name' with your desired column
+
+st.wtite(f"Calculated Date Starting From {first_per_date} to {last_per_date}")
+
 # ----- SECTION 4 + 1: Selection widget for applying date filter ranging from minimum to maximum existing date values
 
 # Create 3 columns with empty space on both sides for centering the buttons
