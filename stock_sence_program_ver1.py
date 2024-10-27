@@ -61,7 +61,7 @@ df = pd.read_csv('accessories.csv')
 # function for conveting the jalali datetime values into gregorian
 def jalali_to_gregorian(date):
     if isinstance(date, str):
-        year, month, day = date.split("/")
+        year, month, day = date.split("-")
         gregorian_date = jdatetime.date(int(year), int(month), int(day)).togregorian()
         return gregorian_date
     else:
